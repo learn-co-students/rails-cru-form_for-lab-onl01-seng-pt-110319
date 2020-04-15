@@ -1,0 +1,22 @@
+<h1>Edit Song Form</h1>
+<table>
+<%= form_for(@song) do |f| %>
+  <tr>
+
+  <td><%= f.label :name, 'Song Name' %></td>
+  <td><%= f.text_field :name %></td></tr>
+  <tr><td><%= f.label :artist_id, 'Artist ID' %></td>
+  <td><%= f.number_field :artist_id %></td></tr>
+  <tr><td><%= f.label :genre_id, 'Genre ID' %></td>
+  <td><%= f.number_field :genre_id %></td></tr>
+<%#  <tr><td><%= f.label :artist_id%></td>
+<%#   <td><%= f.collection_select :song, :artist_id, @artists,:id,:name, <%# include_blank: true %>
+<%# </td></tr>
+<%# <tr><td><%= f.label :genre_id%></td>
+<%# <td><%= f.collection_select :song, :genre_id, @genres,:id,:name, <%# include_blank: true %>
+<%# </td></tr> %>
+  <tr>
+    <td><%= f.submit %></td>
+  </tr>
+  </table>
+<% end %>
